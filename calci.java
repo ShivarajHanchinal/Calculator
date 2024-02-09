@@ -1,49 +1,54 @@
+// Java Program to Perform Arithmetic Operations using Methods
 import java.util.Scanner;
 
-class Calculator3 {
-    float a = 10, b = 50;
-
-    void add() {
-        System.out.println("Sum: " + (a + b));
-    }
-
-    void sub() {
-        System.out.println("Diff: " + (a - b));
-    }
-
-    void div() {
-        System.out.println("Quotient: " + (a / b));
-    }
-
-    void mul() {
-        System.out.println("Product: " + (a * b));
-    }
-}
-
-class A extends Calculator3 {
+class calci  extends branch1 
+{
     public static void main(String[] args) {
-        A calculatorI = new A();
-        
-        System.out.println("Enter the choice:");
         Scanner in = new Scanner(System.in);
-        int ch = in.nextInt();
 
-        switch (ch) {
-            case 1:
-                calculatorI.add();
-                break;
-            case 2:
-                calculatorI.sub();
-                break;
-            case 3:
-                calculatorI.div();
-                break;
-            case 4:
-                calculatorI.mul();
-                break;
-            default:
-                System.out.println("Invalid Choice");
-                break;
-        }
+        System.out.println("--::BASIC ARITHMETIC OPARATIONS::--");
+        System.out.println("Enter first number:");
+        int p = in.nextInt();
+        System.out.println("Enter second number");
+        int q = in.nextInt();
+
+        System.out.println("\nSUM         " + p + " + " + q + " = " + Sum(p, q));
+        System.out.println("DIFFERENCE  " + p + " - " + q + " = " + Sub(p, q));
+        System.out.println("PRODUCT     " + p + " * " + q + " = " + Mul(p, q));
+        System.out.println("QUOTIENT    " + p + " / " + q + " = " + Div(p, q));
+
+        System.out.println("\n\nArithmetic operation like \nSQUARE CUBE POWER ");
+        System.out.print("Enter one number for finding Square and cube : ");
+        int a=in.nextInt();
+        mySquare(a);
+        myCube(a);
+        System.out.println("Square of "+a+"is :"+mySquare(a));
+        System.out.println("Cube of "+a+"is :"+myCube(a));
+        System.out.println("Enter two number for finding power : ");
+        int x=in.nextInt();
+        int y=in.nextInt();
+        myPower(x, y);
+        System.out.println("Power of "+x+" and "+y+"is :"+myPower(x,y));
+     }
+    // To make sum of two numbers
+    public static int Sum(int x, int y) {
+        return x + y;
     }
+
+    // To make subtraction of two numbers
+    public static int Sub(int x, int y) {
+        return x - y;
+    }
+
+    // To make multilication of two numbers
+    public static int Mul(int x, int y) {
+        return x * y;
+    }
+
+    // To make division of two numbers
+    public static float Div(int x, int y) {
+        return x / y;
+    }
+
+     
 }
