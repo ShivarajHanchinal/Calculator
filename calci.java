@@ -1,49 +1,24 @@
 import java.util.Scanner;
 
-class Calculator3 {
-    float a = 10, b = 50;
+public class calci {
 
-    void add() {
-        System.out.println("Sum: " + (a + b));
-    }
+    void calci() {
+        double num1 = 10, num2 = 20;
 
-    void sub() {
-        System.out.println("Diff: " + (a - b));
-    }
+        System.out.println("Num1=" + num1);
+        System.out.println("Num2=" + num2);
 
-    void div() {
-        System.out.println("Quotient: " + (a / b));
-    }
-
-    void mul() {
-        System.out.println("Product: " + (a * b));
+        System.out.println("Addition=" + (num1 + num2));
+        System.out.println("Substraction=" + (num1 - num2));
+        System.out.println("Multiplication=" + (num1 * num2));
+        System.out.println("Division=" + (num1 / num2));
     }
 }
 
-class A extends Calculator3 {
+class arithmatic {
     public static void main(String[] args) {
-        A calculatorI = new A();
-        
-        System.out.println("Enter the choice:");
-        Scanner in = new Scanner(System.in);
-        int ch = in.nextInt();
+        calci z = new calci();
+        z.calci();
 
-        switch (ch) {
-            case 1:
-                calculatorI.add();
-                break;
-            case 2:
-                calculatorI.sub();
-                break;
-            case 3:
-                calculatorI.div();
-                break;
-            case 4:
-                calculatorI.mul();
-                break;
-            default:
-                System.out.println("Invalid Choice");
-                break;
-        }
     }
 }
